@@ -26,19 +26,17 @@ import styled from '@emotion/styled';
 //   font-weight: 700;
 // `;
 
-
-
-
-
 // export const List = styled.ul`
 //   margin: 0;
 //   padding: 0 0 0 15px;
 //   list-style-type: circle;
 // `;
+
 // export const Li = styled.li`
 //   display: list-item;
 //   font-size: 12px;
 // `;
+
 // export const Delete = styled.button`
 //   background-color: #ffcec8;
 //   border: 1px solid grey;
@@ -54,44 +52,16 @@ import styled from '@emotion/styled';
 //   }
 // `;
 
-
-
-
-
-
-
-
-
-
-
-
-
 export const List = styled.ul`
   list-style: none;
   min-width: 360px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  border: 2px solid #0047ab;
-  border-radius: 3px;
+  border-radius: 20px;
   padding: 20px;
-`;
-
-export const Button = styled.button`
-  width: 80px;
-  height: 100%;
-  background-color: transparent;
-  border: none;
-  font-size: 18px;
-  font-weight: 500;
-  color: #0047ab;
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
-  }
+  background-color: #f4f6fc;
+  margin: 0;
 `;
 
 export const Text = styled.p`

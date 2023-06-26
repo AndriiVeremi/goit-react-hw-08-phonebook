@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/contacts/cont-operation';
+import { addContact, updateContact } from '../../redux/contacts/cont-operation';
 import { selectContacts } from '../../redux/contacts/selector';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { nanoid } from 'nanoid';
 import { Button } from '@mui/material';
 import {
   AiOutlineUser,
@@ -10,49 +9,30 @@ import {
   AiTwotonePhone,
 } from 'react-icons/ai';
 import { Form, Input, Label } from './ContactForm.styled';
+import { Notify } from 'notiflix';
 
 function ContactForm() {
-  const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
-
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
-  const handleChange = e => {
-    switch (e.currentTarget.name) {
-      case 'name':
-        setName(e.currentTarget.value);
-        break;
-      case 'number':
-        setNumber(e.currentTarget.value);
-        break;
-      default:
-        return;
-    }
-  };
-
-  const checkName = name => {
-    const newName = name.toLowerCase();
-    return contacts.find(({ name }) => name.toLowerCase() === newName);
-  };
-
   const handleSubmit = e => {
     e.preventDefault();
+    const form = e.target;
+    const name = form.elements.name.value;
+    const number = form.elements.number.value;
 
-    if (!checkName(name)) {
-      dispatch(addContact({ name, number }));
-      Notify.success('The contact has been sent to storage');
-      reset();
-    } else {
-      Notify.failure('Sorry, Not a unique contact');
+    const existingContact = contacts.find(contact => contact.name === name);
+    if (existingContact) {
+      dispatch(updateContact({ ...existingContact, number }));
       return;
     }
+
+    dispatch(addContact({ name, number }));
+    form.reset();
   };
 
-  const reset = () => {
-    setName('');
-    setNumber('');
-  };
+  const nameId = nanoid();
+  const numberId = nanoid();
 
   return (
     <Form autoComplete="off" onSubmit={handleSubmit}>
@@ -61,8 +41,7 @@ function ContactForm() {
         Name :{' '}
         <Input
           type="text"
-          value={name}
-          onChange={handleChange}
+          id={nameId}
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
@@ -75,8 +54,7 @@ function ContactForm() {
         Phone :
         <Input
           type="tel"
-          value={number}
-          onChange={handleChange}
+          id={numberId}
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"

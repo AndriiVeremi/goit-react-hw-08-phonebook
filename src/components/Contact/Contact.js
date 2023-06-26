@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Button } from '@mui/material';
 import { ContactLi } from './Contact.styled';
 import { deleteContact } from '../../redux/contacts/cont-operation';
+import { AiOutlineUserDelete } from 'react-icons/ai';
 
 export const Contact = ({ id, name, number }) => {
   const error = useSelector(selectError);
@@ -24,10 +25,12 @@ export const Contact = ({ id, name, number }) => {
         </Button>
       ) : (
         <Button
+
           type="button"
           style={{ marginLeft: 25, height: 36 }}
           variant="contained"
           size="small"
+          endIcon={<AiOutlineUserDelete />}
           onClick={() => {
             dispatch(deleteContact(id));
             loader();
