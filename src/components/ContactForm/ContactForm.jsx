@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/contactsOperation';
-import { selectContacts } from '../../redux/selector';
+import { addContact } from '../../redux/contacts/cont-operation';
+import { selectContacts } from '../../redux/contacts/selector';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { Button } from '@mui/material';
 import {
   AiOutlineUser,
   AiOutlineUserAdd,
   AiTwotonePhone,
 } from 'react-icons/ai';
-import { Form, Input, Label, Button } from './ContactForm.styled';
+import { Form, Input, Label } from './ContactForm.styled';
 
 function ContactForm() {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
@@ -22,8 +23,8 @@ function ContactForm() {
       case 'name':
         setName(e.currentTarget.value);
         break;
-      case 'phone':
-        setPhone(e.currentTarget.value);
+      case 'number':
+        setNumber(e.currentTarget.value);
         break;
       default:
         return;
@@ -39,7 +40,7 @@ function ContactForm() {
     e.preventDefault();
 
     if (!checkName(name)) {
-      dispatch(addContact({ name, phone }));
+      dispatch(addContact({ name, number }));
       Notify.success('The contact has been sent to storage');
       reset();
     } else {
@@ -50,7 +51,7 @@ function ContactForm() {
 
   const reset = () => {
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   return (
@@ -74,17 +75,16 @@ function ContactForm() {
         Phone :
         <Input
           type="tel"
-          value={phone}
+          value={number}
           onChange={handleChange}
-          name="phone"
+          name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
       </Label>
 
-      <Button type="submit">
-        <AiOutlineUserAdd />
+      <Button type="submit" variant="contained" endIcon={<AiOutlineUserAdd />}>
         Add contact
       </Button>
     </Form>
@@ -92,5 +92,3 @@ function ContactForm() {
 }
 
 export default ContactForm;
-
-
