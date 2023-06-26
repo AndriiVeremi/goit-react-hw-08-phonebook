@@ -3,10 +3,10 @@ import styled from '@emotion/styled';
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  border: 1px solid #3d9be8;
+  border: 1px solid #7b9e7d;
   padding: 30px;
   width: 360px;
-  background-color: #f4f6fc;
+  background-color: #d6e8d7;
   border-radius: 20px;
   margin-bottom: 50px;
 `;
