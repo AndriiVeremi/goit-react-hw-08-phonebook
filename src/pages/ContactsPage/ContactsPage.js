@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectIsLoading, selectError } from '../redux/contacts/selector';
-import { fetchContacts } from '../redux/contacts/cont-operation';
-import ContactForm from '../components/ContactForm/ContactForm';
-import Filter from '../components/Filter/Filter';
-import ContactsList from '../components/ContactList/ContactList';
-import { Containers, Title, Subtitle } from '../pages/ContactsPage.styled';
+import { selectIsLoading, selectError } from '../../redux/contacts/selector';
+import { fetchContacts } from '../../redux/contacts/cont-operation';
+import ContactForm from '../../components/ContactForm/ContactForm';
+import Filter from '../../components/Filter/Filter';
+import ContactsList from '../../components/ContactList/ContactList';
+import { Containers, Title, Subtitle } from './ContactsPage.styled';
 
 export default function Contacts() {
   const dispatch = useDispatch();

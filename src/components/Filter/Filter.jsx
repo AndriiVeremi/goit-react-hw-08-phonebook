@@ -1,4 +1,4 @@
-import { Lable, Input } from './Filter.styled';
+import { Label, Input } from './Filter.styled';
 import { useDispatch } from 'react-redux';
 import { setFilter } from '../../redux/contacts/filter-slice';
 
@@ -11,9 +11,9 @@ const Filter = () => {
   };
 
   return (
-    <Lable>
+    <Label>
       <Input type="text" onChange={changeFilter} />
-    </Lable>
+    </Label>
   );
 };
 

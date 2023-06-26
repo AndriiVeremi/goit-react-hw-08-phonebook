@@ -9,7 +9,7 @@ import {
   AiTwotonePhone,
 } from 'react-icons/ai';
 import { Form, Input, Label } from './ContactForm.styled';
-import { Notify } from 'notiflix';
+
 
 function ContactForm() {
   const dispatch = useDispatch();

@@ -20,7 +20,7 @@ const ContactsList = () => {
           ))}
         </List>
       ) : (
-        <Text>There are no contacts in your Phonebook. You can add one!</Text>
+        <Text>There are no contacts in your Phonebook. <br /> You can add one!</Text>
       )}
     </>
   );

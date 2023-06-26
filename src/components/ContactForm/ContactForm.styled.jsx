@@ -16,10 +16,10 @@ export const Input = styled.input`
   width: 270px;
   height: 30px;
   border-radius: 10px;
-  border: 1px solid #3d9be8;
+  border: 1px solid #7b9e7d;
   font-size: 20px;
   padding-left: 10px;
-  color: #3d9be8;
+  color: #1976d2;
 `;
 
 export const Label = styled.label`
@@ -28,15 +28,6 @@ export const Label = styled.label`
   margin-bottom: 35px;
 `;
 
-export const Button = styled.button`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 110px;
-  height: 30px;
-  margin: 0 auto;
-  border: 1px solid #565656;
-  border-radius: 5px;
-`;
+
 
 

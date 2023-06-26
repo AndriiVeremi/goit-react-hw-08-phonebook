@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectError } from '../../redux/contacts/selector';
 import { useState } from 'react';
 import { Button } from '@mui/material';
-import { ContactLi } from './Contact.styled';
+import { List, Text } from './Contact.styled';
 import { deleteContact } from '../../redux/contacts/cont-operation';
 import { AiOutlineUserDelete } from 'react-icons/ai';
 
@@ -16,18 +16,16 @@ export const Contact = ({ id, name, number }) => {
   };
 
   return (
-    <ContactLi>
-      <p style={{ fontFamily: 'Caveat', fontWeight: '400', fontSize: 18 }}>
+    <List>
+      <Text>
         {name}: {number}
-      </p>
+      </Text>
       {isLoading && !error ? (
         <Button style={{ marginLeft: 25, height: 36 }} variant="contained">
         </Button>
       ) : (
         <Button
-
           type="button"
-          style={{ marginLeft: 25, height: 36 }}
           variant="contained"
           size="small"
           endIcon={<AiOutlineUserDelete />}
@@ -39,6 +37,6 @@ export const Contact = ({ id, name, number }) => {
           Delete
         </Button>
       )}
-    </ContactLi>
+    </List>
   );
 };
