@@ -1,12 +1,12 @@
 import { useDispatch } from 'react-redux';
 import { logOut } from '../../redux/auth/auth-operation';
 import { useAuth } from '../../hooks/useAuth';
-import { Container, Name } from './UserMenu.styled';
 import { Button } from '@mui/material';
-import { selectAuthIsLoading, selectAuthError } from '../../redux/auth/auth-selectors';
-// import { Puff } from 'react-loading-icons';
+import {  selectAuthIsLoading, selectAuthError } from '../../redux/auth/auth-selectors';
 import { useSelector } from 'react-redux';
-// import { toast } from 'react-hot-toast';
+
+import { AiOutlineLogout } from 'react-icons/ai';
+import { Container, Name } from './UserMenu.styled';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -32,16 +32,17 @@ export const UserMenu = () => {
       <Name>Welcome, {user.name}</Name>
       {isLoading ? (
         <Button fullWidth variant="contained">
-          {/* <Puff height={24} stroke="#fff" style={{ padding: '0 16px' }} /> */}
         </Button>
       ) : (
-        <Button
+        <Button       
+          endIcon={<AiOutlineLogout />}
           type="button"
+          fullWidth
+          
+          variant="contained"
           onClick={() => {
             dispatch(logOut());
           }}
-          fullWidth
-          variant="contained"
         >
           Logout
         </Button>
@@ -49,4 +50,3 @@ export const UserMenu = () => {
     </Container>
   );
 };
-

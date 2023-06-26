@@ -2,11 +2,9 @@ import styled from '@emotion/styled';
 
 export const Form = styled.form`
   width: 320px;
-  border-radius: 20px;
 `;
 
-// export const Label = styled.label`
-//   display: flex;
-//   flex-direction: column;
-//   margin-bottom: 16px;
-// `;
+export const Title = styled.h1`
+  color: #1976d2;
+  text-align: center;
+`;

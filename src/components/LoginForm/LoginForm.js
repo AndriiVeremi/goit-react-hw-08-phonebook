@@ -1,11 +1,10 @@
-import { Form } from './LoginForm.styled';
-import { Button, TextField, Box, Container } from '@mui/material';
-// import { Puff } from 'react-loading-icons';
 import { useSelector } from 'react-redux';
+import { Button, TextField, Box, Container } from '@mui/material';
 import {
   selectAuthIsLoading,
   selectAuthError,
 } from '../../redux/auth/auth-selectors';
+import { Form, Title } from './LoginForm.styled';
 
 export const LoginForm = ({ onData }) => {
   const isLoading = useSelector(selectAuthIsLoading);
@@ -31,13 +30,13 @@ export const LoginForm = ({ onData }) => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          backgroundColor: '#fff',
+          backgroundColor: '#d6e8d7',
           borderRadius: '20px',
           padding: '40px',
           boxShadow: ' rgb(33 33 33) 0px 2px 5px 1px',
         }}
       >
-        <h1 style={{ textAlign: 'center' }}>Log in please</h1>
+        <Title>Log in please</Title>
         <Form onSubmit={handleSubmit} autoComplete="off">
           <TextField
             margin="normal"
@@ -62,10 +61,9 @@ export const LoginForm = ({ onData }) => {
           />
           {isLoading ? (
             <Button variant="contained" style={{ marginTop: 30 }}>
-              {/* <Puff height={22} stroke="#fff" /> */}
             </Button>
           ) : (
-            <Button type="submit" variant="contained" style={{ marginTop: 30 }}>
+            <Button type="submit" fullWidth variant="contained" style={{ marginTop: 30 }}>
               Log In
             </Button>
           )}

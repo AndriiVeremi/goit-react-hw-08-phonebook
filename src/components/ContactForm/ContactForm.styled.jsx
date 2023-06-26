@@ -26,6 +26,7 @@ export const Label = styled.label`
   display: flex;
   align-items: center;
   margin-bottom: 35px;
+  color: #1976d2;
 `;
 
 

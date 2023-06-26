@@ -10,7 +10,6 @@ import {
 } from 'react-icons/ai';
 import { Form, Input, Label } from './ContactForm.styled';
 
-
 function ContactForm() {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);

@@ -1,12 +1,10 @@
-// import { Puff } from 'react-loading-icons';
 import { useSelector } from 'react-redux';
+import { Button, TextField, Box, Container } from '@mui/material';
 import {
   selectAuthIsLoading,
   selectAuthError,
 } from '../../redux/auth/auth-selectors';
-
-import { Form } from './RegisterForm.styled';
-import { Button, TextField, Box, Container } from '@mui/material';
+import { Form, Title } from './RegisterForm.styled';
 
 export const RegisterForm = ({ onData }) => {
   const isLoading = useSelector(selectAuthIsLoading);
@@ -15,13 +13,13 @@ export const RegisterForm = ({ onData }) => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
-    
+
     onData({
       name: form.elements.name.value,
       email: form.elements.email.value,
       password: form.elements.password.value,
     });
-   
+
     if (!isLoading && status !== null) {
       form.reset();
     }
@@ -35,14 +33,13 @@ export const RegisterForm = ({ onData }) => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          backgroundColor: 'white',
-          padding: '20px',
+          backgroundColor: '#d6e8d7',
+          borderRadius: '20px',
+          padding: '40px',
           boxShadow: '0px 2px 10px 1px rgb(33 33 33) ',
         }}
       >
-        <h1 style={{ textAlign: 'center', fontFamily: 'monospace' }}>
-          Sign Up
-        </h1>
+        <Title>Sign Up</Title>
         <Form
           onSubmit={handleSubmit}
           autoComplete="off"
@@ -80,9 +77,11 @@ export const RegisterForm = ({ onData }) => {
             variant="standard"
           />
           {isLoading ? (
-            <Button variant="contained" fullWidth style={{ marginTop: 30 }}>
-              {/* <Puff height={22} stroke="#fff" /> */}
-            </Button>
+            <Button
+              variant="contained"
+              fullWidth
+              style={{ marginTop: 30 }}
+            ></Button>
           ) : (
             <Button
               type="submit"

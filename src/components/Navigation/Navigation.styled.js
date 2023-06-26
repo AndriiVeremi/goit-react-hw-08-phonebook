@@ -6,14 +6,15 @@ export const Link = styled(NavLink)`
   text-decoration: none;
   padding: 12px;
   font-weight: 700;
-  color: black;
+  color: #1976d2;
+  font-size: 20px;
   &:hover {
     color: teal;
   }
 
   &.active {
-    color: white;
-    text-shadow: teal 2px 4px 3px, teal 6px 8px 30px, teal 1px 3px 30px;
+    color: #e91e63;
     font-weight: 900;
+    font-size: 20px;
   }
 `;
