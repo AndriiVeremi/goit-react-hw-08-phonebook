@@ -1,4 +1,4 @@
-import{Container, Text} from './HomePage.styled'
+import{Container, Text} from './HomePage.styled';
 
 export default function Home() {
   return (
@@ -16,6 +16,6 @@ export default function Home() {
       </Text>
     </Container>
   );
-}
+};
 
 

@@ -2,9 +2,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectError } from '../../redux/contacts/selector';
 import { useState } from 'react';
 import { Button } from '@mui/material';
-import { List, Text } from './Contact.styled';
 import { deleteContact } from '../../redux/contacts/cont-operation';
 import { AiOutlineUserDelete } from 'react-icons/ai';
+import { List, Text } from './ContactItem.styled';
 
 export const Contact = ({ id, name, number }) => {
   const error = useSelector(selectError);

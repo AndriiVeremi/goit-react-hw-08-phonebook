@@ -9,7 +9,7 @@ import { Form, Title } from './LoginForm.styled';
 export const LoginForm = ({ onData }) => {
   const isLoading = useSelector(selectAuthIsLoading);
   const status = useSelector(selectAuthError);
-
+  
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;

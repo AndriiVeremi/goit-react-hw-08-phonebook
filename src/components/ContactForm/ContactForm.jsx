@@ -19,13 +19,11 @@ function ContactForm() {
     const form = e.target;
     const name = form.elements.name.value;
     const number = form.elements.number.value;
-
     const existingContact = contacts.find(contact => contact.name === name);
     if (existingContact) {
       dispatch(updateContact({ ...existingContact, number }));
       return;
     }
-
     dispatch(addContact({ name, number }));
     form.reset();
   };

@@ -5,7 +5,6 @@ import { LoginForm } from '../components/LoginForm/LoginForm';
 import { selectAuthError } from '../redux/auth/auth-selectors';
 import { logIn, clearAuthError } from '../redux/auth/auth-operation';
 
-
 export default function Login() {
   const dispatch = useDispatch();
   const status = useSelector(selectAuthError);
