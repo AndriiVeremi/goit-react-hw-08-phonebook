@@ -27,7 +27,7 @@ function ContactForm() {
       return;
     }
     dispatch(addContact({ name, number }));
-    Notify.failure(`${name} Added to your list.`);
+    Notify.success(`${name} added to your list.`);
     form.reset();
   };
 
