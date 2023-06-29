@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact, updateContact } from '../../redux/contacts/cont-operation';
 import { selectContacts } from '../../redux/contacts/selector';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { nanoid } from 'nanoid';
 import { Button } from '@mui/material';
 import {
@@ -22,9 +23,11 @@ function ContactForm() {
     const existingContact = contacts.find(contact => contact.name === name);
     if (existingContact) {
       dispatch(updateContact({ ...existingContact, number }));
+      Notify.failure(`${name} this contact already exists.`);
       return;
     }
     dispatch(addContact({ name, number }));
+    Notify.failure(`${name} Added to your list.`);
     form.reset();
   };
 

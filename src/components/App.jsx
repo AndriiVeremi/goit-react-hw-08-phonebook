@@ -31,7 +31,7 @@ const App = () => {
           transform: 'translate(-50%, -50%)',
         }}
       >
-        Refreshing user...
+        Refreshing users...
       </h1>
     </div>
   ) : (
