@@ -9,10 +9,10 @@ import { List, Text } from './ContactItem.styled';
 export const Contact = ({ id, name, number }) => {
   const error = useSelector(selectError);
   const dispatch = useDispatch();
-  const [isLoading, setIsLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const loader = () => {
-    setIsLoading(true);
+    setLoading(true);
   };
 
   return (
@@ -20,9 +20,8 @@ export const Contact = ({ id, name, number }) => {
       <Text>
         {name}: {number}
       </Text>
-      {isLoading && !error ? (
-        <Button style={{ marginLeft: 25, height: 36 }} variant="contained">
-        </Button>
+      {loading && !error ? (
+        <Button style={{ marginLeft: 25, height: 36 }} variant="contained"></Button>
       ) : (
         <Button
           type="button"

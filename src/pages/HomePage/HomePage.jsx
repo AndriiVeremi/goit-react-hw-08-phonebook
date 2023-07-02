@@ -1,21 +1,23 @@
-import{Container, Text} from './HomePage.styled';
+import Images from '../../images/book.png';
+import { Container, TextArea, Title, Text, Photo, Img } from './HomePage.styled';
 
 export default function Home() {
   return (
     <Container>
-      <Text>
-        <p>Heloo! This is app PhoneBook for contacts.</p>
-        <p>
+      <Photo>
+        <Img src={Images} width="400" height="auto" />
+      </Photo>
+      <TextArea>
+        <Title>Heloo! This is app PhoneBook for contacts.</Title>
+        <Text>
           The app is user friendly and intuitive so you can easily create your
           own phonebook without any hassle.
-        </p>
-        <p>
+        </Text>
+        <Text>
           So don't wait anymore, get your own phonebook now and make organizing
           and managing your contacts easy and hassle-free!
-        </p>
-      </Text>
+        </Text>
+      </TextArea>
     </Container>
   );
-};
-
-
+}

@@ -8,3 +8,10 @@ export const Header = styled.header`
   border-bottom: 2px solid #258fa7;
   padding: 15px;
 `;
+
+export const Title = styled.p`
+  font-size: 40px;
+  margin: 0px;
+  color: #258fa7;
+  font-weight: 800;
+`;
