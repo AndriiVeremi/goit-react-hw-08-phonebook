@@ -33,7 +33,7 @@ export const RegisterForm = ({ onData }) => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          backgroundColor: '#d6e8d7',
+          backgroundColor: '#fff',
           borderRadius: '20px',
           padding: '40px',
           boxShadow: '0px 2px 10px 1px rgb(33 33 33) ',

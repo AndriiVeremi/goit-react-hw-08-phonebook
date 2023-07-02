@@ -30,7 +30,7 @@ export const LoginForm = ({ onData }) => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          backgroundColor: '#d6e8d7',
+          backgroundColor: '#fff',
           borderRadius: '20px',
           padding: '40px',
           boxShadow: ' rgb(33 33 33) 0px 2px 5px 1px',
