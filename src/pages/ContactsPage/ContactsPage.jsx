@@ -18,7 +18,7 @@ export default function Contacts() {
 
   return (
     <div>
-      <Title>Phone Book</Title>
+      <Title>Name & Phone</Title>
       <Containers>
         <div>
           <Subtitle>Add new contact</Subtitle>

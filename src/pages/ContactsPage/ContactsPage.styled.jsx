@@ -6,17 +6,17 @@ export const Containers = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-weight: 600;
+  font-weight: 700;
   font-size: 36px;
   text-align: center;
-  margin-bottom: 40px;
+  margin: 40px;
   color: #1976d2;
 `;
 
 export const Subtitle = styled.h2`
-  font-weight: 500;
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 15px;
   color: #258fa7;
 `;
 
