@@ -9,7 +9,7 @@ const AppBar = () => {
   return (
     <Header>
       <Navigation />
-      <Title>Phonebook</Title>
+      {/* <Title>Phonebook</Title> */}
       {isLoggedIn ? <UserMenu /> : <AuthNavigation />}
     </Header>
   );

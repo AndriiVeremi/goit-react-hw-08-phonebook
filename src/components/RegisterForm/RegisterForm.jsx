@@ -36,7 +36,7 @@ export const RegisterForm = ({ onData }) => {
           backgroundColor: '#fff',
           borderRadius: '20px',
           padding: '40px',
-          boxShadow: '0px 2px 10px 1px rgb(33 33 33) ',
+          boxShadow: '0px 2px 10px 1px #828e6d',
         }}
       >
         <Title>Sign Up</Title>
@@ -80,14 +80,14 @@ export const RegisterForm = ({ onData }) => {
             <Button
               variant="contained"
               fullWidth
-              style={{ marginTop: 30 }}
+              style={{ backgroundColor: '#8e6d8a', marginTop: 30 }}
             ></Button>
           ) : (
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              style={{ marginTop: 30 }}
+              style={{ backgroundColor: '#8e6d8a', marginTop: 30 }}
             >
               Register
             </Button>

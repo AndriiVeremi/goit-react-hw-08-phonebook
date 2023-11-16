@@ -21,12 +21,16 @@ export const Contact = ({ id, name, number }) => {
         {name}: {number}
       </Text>
       {loading && !error ? (
-        <Button style={{ marginLeft: 25, height: 36 }} variant="contained"></Button>
+        <Button
+          style={{ backgroundColor: '#8e6d8a', marginLeft: 25, height: 36 }}
+          variant="contained"
+        ></Button>
       ) : (
         <Button
           type="button"
           variant="contained"
           size="small"
+          style={{ backgroundColor: '#8e6d8a'}}
           endIcon={<AiOutlineUserDelete />}
           onClick={() => {
             dispatch(deleteContact(id));

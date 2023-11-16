@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 
 export const Input = styled.input`
-  border: 1px solid #7b9e7d;
+  border: 1px solid #828e6d;
   width: 300px;
   height: 35px;
   margin-top: 10px;
   margin-bottom: 30px;
   border-radius: 7px;
-  color: #1976d2;
+  color: #8e6d8a;
   font-size: 20px;
   padding-left: 10px;
 `;

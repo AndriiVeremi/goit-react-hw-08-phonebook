@@ -7,6 +7,6 @@ export const List = styled.div`
 `;
 
 export const Text = styled.div`
- font-size: 20px;
- color: #1976d2;
+  font-size: 20px;
+  color: #8e6d8a;
 `;

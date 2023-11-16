@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <Container>
       <Photo>
-        <Img src={Images} width="400" height="auto" />
+        <Img src={Images} width="250" height="auto" />
       </Photo>
       <TextArea>
         <Title>Heloo! This is app PhoneBook for contacts.</Title>

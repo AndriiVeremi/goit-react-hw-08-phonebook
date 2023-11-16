@@ -5,6 +5,6 @@ export const Form = styled.form`
 `;
 
 export const Title = styled.h1`
-  color: #1976d2;
+  color: #8e6d8a;
   text-align: center;
 `;

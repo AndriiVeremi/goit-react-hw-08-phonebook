@@ -8,12 +8,12 @@ export const List = styled.ul`
   gap: 5px;
   border-radius: 20px;
   padding: 20px;
-  background-color: #d6e8d7;
+  background-color: #c5cbba;
   margin: 0;
-  border: 1px solid #7b9e7d;
+  border: 1px solid #828e6d;
 `;
 
 export const Text = styled.p`
-  color: #1976d2;
+  color: #8e6d8a;
   font-size: 20px;
 `;

@@ -27,13 +27,16 @@ export const UserMenu = () => {
     <Container>
       <Name>Welcome, {user.name}</Name>
       {isLoading ? (
-        <Button fullWidth variant="contained">
-        </Button>
+        <Button
+          style={{ backgroundColor: '#8e6d8a' }}
+          fullWidth
+          variant="contained"
+        ></Button>
       ) : (
-        <Button       
+        <Button
           endIcon={<AiOutlineLogout />}
-          type="button"     
-          style={{ width: 300 }}
+          type="button"
+          style={{ width: 300, backgroundColor: '#8e6d8a' }}
           variant="contained"
           onClick={() => {
             dispatch(logOut());

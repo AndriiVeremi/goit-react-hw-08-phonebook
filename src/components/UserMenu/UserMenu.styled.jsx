@@ -11,6 +11,6 @@ export const Name = styled.p`
   text-transform: uppercase;
   font-weight: 700;
   width: 250%;
-  color: #646464;
+  color: #828e6d;
 `;
 

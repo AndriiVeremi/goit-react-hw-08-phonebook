@@ -4,7 +4,7 @@ import {
   selectAuthIsLoading,
   selectAuthError,
 } from '../../redux/auth/auth-selectors';
-import { Form, Title } from './LoginForm.styled';
+import { Form, Title, Btn, Field } from './LoginForm.styled';
 
 export const LoginForm = ({ onData }) => {
   const isLoading = useSelector(selectAuthIsLoading);
@@ -33,7 +33,7 @@ export const LoginForm = ({ onData }) => {
           backgroundColor: '#fff',
           borderRadius: '20px',
           padding: '40px',
-          boxShadow: ' rgb(33 33 33) 0px 2px 5px 1px',
+          boxShadow: ' #828e6d 0px 2px 5px 1px',
         }}
       >
         <Title>Log in please</Title>
@@ -60,10 +60,17 @@ export const LoginForm = ({ onData }) => {
             variant="standard"
           />
           {isLoading ? (
-            <Button variant="contained" style={{ marginTop: 30 }}>
-            </Button>
+            <Button
+              variant="contained"
+              style={{ backgroundColor: '#8e6d8a', marginTop: 30 }}
+            ></Button>
           ) : (
-            <Button type="submit" fullWidth variant="contained" style={{ marginTop: 30 }}>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              style={{ backgroundColor: '#8e6d8a', marginTop: 30 }}
+            >
               Log In
             </Button>
           )}

@@ -62,7 +62,12 @@ function ContactForm() {
         />
       </Label>
 
-      <Button type="submit" variant="contained" endIcon={<AiOutlineUserAdd />}>
+      <Button
+        type="submit"
+        style={{ backgroundColor: '#8e6d8a', marginTop: 30 }}
+        variant="contained"
+        endIcon={<AiOutlineUserAdd />}
+      >
         Add contact
       </Button>
     </Form>
