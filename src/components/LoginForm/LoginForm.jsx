@@ -4,7 +4,7 @@ import {
   selectAuthIsLoading,
   selectAuthError,
 } from '../../redux/auth/auth-selectors';
-import { Form, Title, Btn, Field } from './LoginForm.styled';
+import { Form, Title } from './LoginForm.styled';
 
 export const LoginForm = ({ onData }) => {
   const isLoading = useSelector(selectAuthIsLoading);
